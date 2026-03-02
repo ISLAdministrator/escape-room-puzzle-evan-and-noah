@@ -1,18 +1,38 @@
-/*
-This is a CSS comment :) Text just for humans, it is not part of the code
-Below is basic CSS styling.
-You can change it, add to it, or delete it.
-*/
- body {
-  /* This will turn the screen bright blue if the image fails but the file works */
-  background-color: dodgerblue; 
-  
-  /* Your library image */
-  background-image: url('background.JPG');
+/* Basic page styles for the Escape Room */
+body {
+  background-color: dodgerblue;
+  background-image: url('IMG_8842 (1).JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+#button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#output {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 18px;
+  background: rgba(0,0,0,0.45);
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 80%;
+  max-width: 640px;
 }
