@@ -8,5 +8,5 @@ const button = document.getElementById("button");
 const output = document.getElementById("output");
 
 button.addEventListener("click", function () {
-  output.textContent = "Look at the order of the missing books and the numbers on the spines to unlock the computer.";
+  output.textContent = "Read summaries of the books and choose what genre each of them is. Look at the numbers on the spines assigned to each genre to learn the code for the computer.";
 });
