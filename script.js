@@ -8,5 +8,5 @@ const button = document.getElementById("button");
 const output = document.getElementById("output");
 
 button.addEventListener("click", function () {
-  output.textContent = "Let'start.";
+  output.textContent = "Look at the order of the missing books and the numbers on the spines to unlock the computer.";
 });
