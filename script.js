@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
       output.textContent = "Let's get started!";
       let objectToHide = document.getElementById('room-title2971')
       objectToHide.style.display = 'none';
+      let storyToHide = document.getElementById('library-start-story');
+storyToHide.style.display = 'none';
+
     }); 
   }
 });
