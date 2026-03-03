@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
       let objectToHide = document.getElementById('room-title2971')
       objectToHide.style.display = 'none';
       let storyToHide = document.getElementById('library-start-story');
-storyToHide.style.display = 'none';
-
+      storyToHide.style.display = 'none';
+      let buttonToHide = document.getElementById('start')
+      buttonToHide.style.display = 'none';
     }); 
   }
 });
