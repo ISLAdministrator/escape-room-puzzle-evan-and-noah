@@ -1,12 +1,19 @@
-console.log("Script loaded");
+document.addEventListener('DOMContentLoaded', function () {
+  const hintBtn = document.getElementById('button');
+  const startBtn = document.getElementById('start');
+  const output = document.getElementById('output');
 
-// below is basic example code for using a button
-// you can use it, expand on it, or delete it
-// that all depends on your team's plan.
+  if (!output) return; // nothing to do without output element
 
-const button = document.getElementById("button");
-const output = document.getElementById("output");
+  if (hintBtn) {
+    hintBtn.addEventListener('click', function () {
+      output.textContent = 'maybe organizing the books can help.';
+    });
+  }
 
-button.addEventListener("click", function () {
-  output.textContent = "Read summaries of the books and choose what genre each of them is. Look at the numbers on the spines assigned to each genre to learn the code for the computer.";
+  if (startBtn) {
+    startBtn.addEventListener('click', function () {
+      output.textContent = "Let's get started!";
+    });
+  }
 });
