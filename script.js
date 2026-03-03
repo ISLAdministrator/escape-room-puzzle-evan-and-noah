@@ -7,13 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (hintBtn) {
     hintBtn.addEventListener('click', function () {
-      output.textContent = 'maybe organizing the books can help.';
+      output.textContent ='Maybe organizing the books can help.';
     });
   }
 
   if (startBtn) {
     startBtn.addEventListener('click', function () {
       output.textContent = "Let's get started!";
-    });
+      let objectToHide = document.getElementById('room-title2971')
+      objectToHide.style.display = 'none';
+    }); 
   }
 });
