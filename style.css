@@ -61,7 +61,7 @@ h1 {
 #book2 {
   /* float the book2 to the floor of the page for easier puzzle solving */
   position: fixed;
-  left: 350px;
+  left: 675px;
   bottom: 2%;
   transform: translateY(-50%);
   z-index: 1000;
