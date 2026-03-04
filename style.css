@@ -1,7 +1,7 @@
 /* Basic page styles for the Escape Room */
 body {
   background-color: dodgerblue;
-  background-image: url('background.JPG');
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
