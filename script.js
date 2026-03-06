@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
       storyToHide.style.display = 'none';
       let buttonToHide = document.getElementById('start')
       buttonToHide.style.display = 'none';
+      let TextToHide = document.getElementById('horror-shelf')
+      TextToHide.style.display = 'block';
+      myElement = document.getElementById('fantasy-shelf');   
+      myElement.style.display = 'block';
     }); 
   }
 });

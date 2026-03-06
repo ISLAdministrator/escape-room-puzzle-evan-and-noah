@@ -90,3 +90,10 @@ h1 {
   transform: translateY(-50%);
   z-index: 1000;
 }
+
+#horror-shelf  { 
+  display: none;
+}
+#fantasy-shelf  { 
+  display: none;
+}
