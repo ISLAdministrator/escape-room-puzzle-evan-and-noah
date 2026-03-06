@@ -59,9 +59,33 @@ h1 {
 }
 
 #book2 {
-  /* float the book2 to the floor of the page for easier puzzle solving */
+  /*all book code is generally the same with slight variations*/
   position: fixed;
   left: 675px;
+  bottom: 2%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+#book-4 {
+  position: fixed;
+  left: 775px;
+  bottom: 2%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+#book-3 {
+  position: fixed;
+  left: 875px;
+  bottom: 2%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+#book-1 {
+  position: fixed;
+  left: 575px;
   bottom: 2%;
   transform: translateY(-50%);
   z-index: 1000;
