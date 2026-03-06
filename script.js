@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }); 
   }
 });
-if (XBtn) {
+if (XBtn)
     XBtn.addEventListener('click', function () {
       output.textContent = "Exiting...";
  });
