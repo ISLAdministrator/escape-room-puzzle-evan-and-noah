@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let TextToHide = document.getElementById('horror-shelf')
       TextToHide.style.display = 'block';
       myElement = document.getElementById('fantasy-shelf');   
-      myElement.style.display = 'block';
+      myElement.style.display = 'block';    
     }); 
   }
 });

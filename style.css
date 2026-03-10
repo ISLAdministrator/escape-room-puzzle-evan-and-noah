@@ -101,3 +101,13 @@ h1 {
   position: fixed;
   left: 200px;
 }
+#action-shelf {
+  display: none;
+  position: fixed;
+  left: 500px;
+}
+#non-diction-shelf {
+  display: none;
+  position: fixed;
+  left: 1000px;
+}
