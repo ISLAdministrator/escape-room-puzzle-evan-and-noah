@@ -93,7 +93,11 @@ h1 {
 
 #horror-shelf  { 
   display: none;
+  position: fixed;
+  left: 1500px;
 }
 #fantasy-shelf  { 
   display: none;
+  position: fixed;
+  left: 200px;
 }
