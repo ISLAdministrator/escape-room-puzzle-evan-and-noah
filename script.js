@@ -31,3 +31,9 @@ if (XBtn)
     XBtn.addEventListener('click', function () {
       output.textContent = "Exiting...";
  });
+    // Play and loop audio
+      const audio = document.getElementById('background-audio');
+      if (audio) {
+        audio.play().catch(err => console.error('Error playing audio:', err));
+      }
+    }); 
