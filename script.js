@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
       TextToHide.style.display = 'block';
       myElement = document.getElementById('fantasy-shelf');   
       myElement.style.display = 'block';   
-      myElement = document.getElementById('action-shelf');
-      myElement.style.display = 'block';
-      myElement = document.getElementById('non-fiction-shelf');
-      myElement.style.display = 'block';
+      TheElement = document.getElementById('action-shelf');
+      TheElement.style.display = 'block';
+      ThisElement = document.getElementById('non-fiction-shelf');
+      ThisElement.style.display = 'block';
     }); 
   }
 });
