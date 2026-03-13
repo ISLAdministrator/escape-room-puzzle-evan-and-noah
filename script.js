@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       myElement.style.display = 'block';
       myElement = document.getElementById('non-fiction-shelf');
       myElement.style.display = 'block';
-
           // Play and loop audio
       const audio = document.getElementById('background-audio');
       if (audio) {
