@@ -109,6 +109,7 @@ h1 {
 #non-diction-shelf {
   display: none;
   position: fixed;
+  left: 1130px;
 
 }
 #exit {
