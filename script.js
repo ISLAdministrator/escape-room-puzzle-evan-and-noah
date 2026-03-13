@@ -24,10 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
       TextToHide.style.display = 'block';
       myElement = document.getElementById('fantasy-shelf');   
       myElement.style.display = 'block';   
-      TheElement = document.getElementById('action-shelf');
-      TheElement.style.display = 'block';
-      ThisElement = document.getElementById('non-fiction-shelf');
-      ThisElement.style.display = 'block';
+          // Play and loop audio
+      const audio = document.getElementById('background-audio');
+      if (audio) {
+        audio.play().catch(err => console.error('Error playing audio:', err));
+      }
     }); 
   }
 });
@@ -35,9 +36,3 @@ if (XBtn)
     XBtn.addEventListener('click', function () {
       output.textContent = "Exiting...";
  });
-    // Play and loop audio
-      const audio = document.getElementById('background-audio');
-      if (audio) {
-        audio.play().catch(err => console.error('Error playing audio:', err));
-      }
-    }); 
