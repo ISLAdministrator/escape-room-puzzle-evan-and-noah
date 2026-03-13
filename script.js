@@ -41,3 +41,14 @@ if (XBtn)
     XBtn.addEventListener('click', function () {
       output.textContent = "Exiting...";
  });
+ // Make books clickable
+  const books = ['book2', 'book-4', 'book-3', 'book-1'];
+  books.forEach(bookId => {
+    const book = document.getElementById(bookId);
+    if (book) {
+      book.addEventListener('click', function () {
+        output.textContent = `You clicked on ${bookId}`;
+      });
+    }
+  });
+});
