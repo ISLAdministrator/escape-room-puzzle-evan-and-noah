@@ -3,6 +3,35 @@ document.addEventListener('DOMContentLoaded', function () {
   const startBtn = document.getElementById('start');
   const output = document.getElementById('output');
 
+  const book1 = document.getElementById("book-1");
+  const book2 = document.getElementById("book-2");
+  const book3 = document.getElementById("book-3");
+  const book4 = document.getElementById("book-4");
+
+if (book1) {
+  book1.addEventListener("click", function () {
+    output.textContent = "You clicked Book 1";
+  });
+}
+
+if (book2) {
+  book2.addEventListener("click", function () {
+    output.textContent = "You clicked Book 2";
+  });
+}
+
+if (book3) {
+  book3.addEventListener("click", function () {
+    output.textContent = "You clicked Book 3";
+  });
+}
+
+if (book4) {
+  book4.addEventListener("click", function () {
+    output.textContent = "You clicked Book 4";
+  });
+}
+
   if (!output) return; // nothing to do without output element
 
   if (hintBtn) {
@@ -40,14 +69,3 @@ if (XBtn)
     XBtn.addEventListener('click', function () {
       output.textContent = "Exiting...";
  });
- // Make books clickable
-  const books = ['book2', 'book-4', 'book-3', 'book-1'];
-  books.forEach(bookId => {
-    const book = document.getElementById(bookId);
-    if (book) {
-      book.addEventListener('click', function () {
-        output.textContent = `You clicked on ${bookId}`;
-      });
-    }
-  });
-});
