@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (book1) {
   book1.addEventListener("click", function () {
-    output.textContent = "You clicked Book 1";
+    output.textContent = "In the magical land of Eldoria, dragons fly across the skies and forests whisper ancient secrets. A young farm boy named Lorian discovers that he has a mysterious power when a glowing crystal appears in his hands during a storm. Soon he learns that the crystal is one of the last magical relics that keeps darkness from spreading across the kingdom. An evil sorcerer named Malveron is searching for the crystal to gain unlimited power. If he finds it, he could cover the world in shadow and rule over every kingdom. With the help of a brave elf archer, a clever dwarf inventor, and a talking fox, Lorian begins a dangerous journey across enchanted mountains, hidden cities, and monster-filled caves. Along the way, he learns how to use his magic and discovers that courage and friendship can be stronger than any spell. In the final battle at the ancient castle of Eldoria, Lorian must decide whether he is brave enough to face the sorcerer and protect the magical world forever.    (2)";
   });
 }
 
@@ -22,13 +22,13 @@ if (book2) {
 
 if (book3) {
   book3.addEventListener("click", function () {
-    output.textContent = "You clicked Book 3";
+    output.textContent = " When a dangerous criminal group steals a powerful new weapon from a secret military lab, former special agent Jake Carter is pulled back into action. The group plans to sell the weapon to the highest bidder, which could put thousands of lives at risk. Jake teams up with a skilled hacker and a fearless pilot to track the criminals across several countries. Their mission leads them through high-speed car chases, intense shootouts, and daring escapes from enemy hideouts. As the clock ticks down, Jake must rely on his training, quick thinking, and courage to stop the criminals before the weapon is used. In a final showdown at an abandoned fortress, Jake faces the leader of the group in a fight that will decide the fate of many innocent people. Filled with danger, fast-paced battles, and heroic risks, the story follows one man’s fight to stop a global threat before it’s too late.    (4)";
   });
 }
 
 if (book4) {
   book4.addEventListener("click", function () {
-    output.textContent = "You clicked Book 4";
+    output.textContent = "After moving to a small, quiet town, sixteen-year-old Mara begins hearing strange noises in her new home. Every night at exactly 3:13 a.m., footsteps echo through the hallway—even though everyone in the house is asleep. At first, Mara thinks the old house is just settling. But then doors start opening by themselves, cold whispers come from the walls, and shadows move where nothing should be. When Mara searches the town’s history, she learns something terrifying: years ago, a family disappeared in the same house, and no one ever found out why. Soon Mara realizes the house is not empty. Something is still there, watching, waiting, and growing stronger each night. As the haunting becomes more violent, Mara must uncover the truth about what happened in the house before the same dark force takes her too. But the deeper she digs, the more she begins to fear that some secrets were meant to stay buried.   (1)";
   });
 }
 
