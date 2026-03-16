@@ -2,7 +2,7 @@
 body {
   background-color: dodgerblue;
   background-image: url('background.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
