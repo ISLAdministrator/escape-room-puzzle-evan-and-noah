@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const book2 = document.getElementById("book-2");
   const book3 = document.getElementById("book-3");
   const book4 = document.getElementById("book-4");
+  const laptop = document.getElementById("laptop");
 
 if (book1) {
   book1.addEventListener("click", function () {
@@ -31,6 +32,17 @@ if (book4) {
     output.textContent = "After moving to a small, quiet town, sixteen-year-old Mara begins hearing strange noises in her new home. Every night at exactly 3:13 a.m., footsteps echo through the hallway—even though everyone in the house is asleep. At first, Mara thinks the old house is just settling. But then doors start opening by themselves, cold whispers come from the walls, and shadows move where nothing should be. When Mara searches the town’s history, she learns something terrifying: years ago, a family disappeared in the same house, and no one ever found out why. Soon Mara realizes the house is not empty. Something is still there, watching, waiting, and growing stronger each night. As the haunting becomes more violent, Mara must uncover the truth about what happened in the house before the same dark force takes her too. But the deeper she digs, the more she begins to fear that some secrets were meant to stay buried.   (1)";
   });
 }
+
+if (laptop) {
+ laptop.addEventListener("click", function () {
+    myElement = document.getElementById('fantasy-shelf');  
+     myElement.style.display = 'none';  
+     myElement = document.getElementById('action-shelf');
+     myElement.style.display = 'none';
+     myElement = document.getElementById('non-fiction-shelf');
+     myElement.style.display = 'none';
+    });
+  }
 
   if (!output) return; // nothing to do without output element
 
