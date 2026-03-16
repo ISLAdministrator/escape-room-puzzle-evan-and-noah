@@ -60,6 +60,13 @@ h1 {
   border-radius: 4px;
 }
 
+#laptop {
+  position: fixed;
+  left: 50%; /* Moves it to the middle horizontally */
+  bottom: 20%; /* Keeps it off the floor */
+  transform: translateX(-50%); /* Perfectly centers it */
+  z-index: 1000;
+}
 #book2 {
   /*all book code is generally the same with slight variations*/
   position: fixed;
@@ -93,7 +100,7 @@ h1 {
   z-index: 1000;
 }
 
-#book-1, #book-2, #book-3, #book-4 {
+#book-1, #book-2, #book-3, #book-4, #laptop {
   cursor: pointer;
 }
 
