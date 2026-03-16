@@ -17,7 +17,7 @@ if (book1) {
 
 if (book2) {
   book2.addEventListener("click", function () {
-    output.textContent = "You clicked Book 2";
+    output.textContent = "In this book you are going to explore the real oceans of Earth and explain why they are important for life on our planet. It describes how oceans formed millions of years ago, how ocean currents move water around the globe, and how marine animals—from tiny plankton to giant whales—survive in different ocean environments. The book also explains how scientists study the ocean using research ships, satellites, and deep-sea robots. Readers learn about coral reefs, deep-sea trenches, and the role oceans play in controlling Earth’s climate. In addition, the book discusses real environmental challenges such as pollution, overfishing, and climate change. It shows how these problems affect ocean life and what people around the world are doing to protect marine ecosystems. Through clear explanations and real scientific facts, the book helps readers understand how the oceans work and why protecting them is important for the future of our planet.    (3)";
   });
 }
 

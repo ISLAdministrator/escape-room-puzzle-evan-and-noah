@@ -67,6 +67,7 @@ h1 {
   transform: translateX(-50%); /* Perfectly centers it */
   z-index: 1000;
 }
+
 #book2 {
   /*all book code is generally the same with slight variations*/
   position: fixed;
