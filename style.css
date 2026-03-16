@@ -40,7 +40,9 @@ h1 {
 }
 
 #output {
-  text-align: center;
+  position: fixed;
+  left: 500px;
+  bottom: 60%;
   margin: 10px auto;
   font-size: 18px;
   background: rgba(0,0,0,0.45);
@@ -108,7 +110,7 @@ h1 {
 #action-shelf {
   display: none;
   position: fixed;
-  left: 500px;
+  left: 850px;
 }
 #non-fiction-shelf {
   display: none;
