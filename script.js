@@ -41,6 +41,11 @@ if (laptop) {
      myElement.style.display = 'none';
      myElement = document.getElementById('non-fiction-shelf');
      myElement.style.display = 'none';
+     myElement = document.getElementById('horror-shelf')
+    myElement.style.display = 'none';
+    let buttonToHide = document.getElementById('button')
+    buttonToHide.style.display = 'none';
+
     });
   }
 
@@ -61,8 +66,8 @@ if (laptop) {
       storyToHide.style.display = 'none';
       let buttonToHide = document.getElementById('start')
       buttonToHide.style.display = 'none';
-      let TextToHide = document.getElementById('horror-shelf')
-      TextToHide.style.display = 'block';
+      myElement = document.getElementById('horror-shelf')
+      myElement.style.display = 'block';
       myElement = document.getElementById('fantasy-shelf');   
       myElement.style.display = 'block';   
       myElement = document.getElementById('action-shelf');
@@ -80,4 +85,14 @@ if (laptop) {
 if (XBtn)
     XBtn.addEventListener('click', function () {
       output.textContent = "Exiting...";
+      myElement = document.getElementById('fantasy-shelf');  
+     myElement.style.display = 'block';  
+     myElement = document.getElementById('action-shelf');
+     myElement.style.display = 'block';
+     myElement = document.getElementById('non-fiction-shelf');
+     myElement.style.display = 'block';
+     myElement = document.getElementById('horror-shelf')
+    myElement.style.display = 'block';
+    let buttonToHide = document.getElementById('button')
+    buttonToHide.style.display = 'button';
  });
