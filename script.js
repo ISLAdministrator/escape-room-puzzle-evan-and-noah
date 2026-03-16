@@ -82,17 +82,18 @@ if (laptop) {
     }); 
   }
 });
-if (XBtn)
+if (XBtn){
     XBtn.addEventListener('click', function () {
-      output.textContent = "Exiting...";
-      myElement = document.getElementById('fantasy-shelf');  
-     myElement.style.display = 'block';  
-     myElement = document.getElementById('action-shelf');
-     myElement.style.display = 'block';
-     myElement = document.getElementById('non-fiction-shelf');
-     myElement.style.display = 'block';
-     myElement = document.getElementById('horror-shelf')
+    output.textContent = "Exiting...";
+    myElement = document.getElementById('fantasy-shelf');  
+    myElement.style.display = 'block';  
+    myElement = document.getElementById('action-shelf');
+    myElement.style.display = 'block';
+    myElement = document.getElementById('non-fiction-shelf');
+    myElement.style.display = 'block';
+    myElement = document.getElementById('horror-shelf')
     myElement.style.display = 'block';
     let buttonToHide = document.getElementById('button')
     buttonToHide.style.display = 'button';
  });
+}
