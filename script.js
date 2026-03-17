@@ -103,7 +103,7 @@ if (XBtn){
   if (laptop) {
     laptop.addEventListener('click', function () {
       if (!backgroundSwapped) {
-        document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundImage = "url (assets/broken-screen.jpg";
         document.body.style.backgroundColor = 'black';
         backgroundSwapped = true;
         output.textContent = 'Enter Password';
