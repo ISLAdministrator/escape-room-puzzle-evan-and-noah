@@ -62,9 +62,9 @@ h1 {
 
 #laptop {
   position: fixed;
-  left: 50%; /* Moves it to the middle horizontally */
-  bottom: 20%; /* Keeps it off the floor */
-  transform: translateX(-50%); /* Perfectly centers it */
+  left: 50%; 
+  bottom: 20%; 
+  transform: translateX(-50%); 
   z-index: 1000;
 }
 

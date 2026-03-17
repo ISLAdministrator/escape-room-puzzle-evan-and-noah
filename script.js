@@ -45,7 +45,6 @@ if (laptop) {
     myElement.style.display = 'none';
     let buttonToHide = document.getElementById('button')
     buttonToHide.style.display = 'none';
-
     });
   }
 
