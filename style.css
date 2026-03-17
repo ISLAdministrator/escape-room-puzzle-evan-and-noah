@@ -147,7 +147,6 @@ h1 {
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 1000;
-}
   background-color: #2175a5;
   color: white;
   border: none;
