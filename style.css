@@ -79,16 +79,16 @@ h1 {
 
 #book-4 {
   position: fixed;
-  left: 775px;
-  bottom: 2%;
+  left: 1077px;
+  bottom: 22%;
   transform: translateY(-50%);
   z-index: 1000;
 }
 
 #book-3 {
   position: fixed;
-  left: 875px;
-  bottom: 2%;
+  left: 275px;
+  bottom: 15%;
   transform: translateY(-50%);
   z-index: 1000;
 }
