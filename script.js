@@ -106,7 +106,7 @@ if (XBtn){
         document.body.style.backgroundImage = 'none';
         document.body.style.backgroundColor = 'black';
         backgroundSwapped = true;
-        output.textContent = 'Computer screen unlocked!';
+        output.textContent = 'Enter Password';
       } else {
         document.body.style.backgroundImage = "url('background.jpg')";
         document.body.style.backgroundColor = 'dodgerblue';
