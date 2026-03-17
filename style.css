@@ -147,9 +147,10 @@ h1 {
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 1000;
-  background-color: #2175a5;
+  background-color: dodgerblue;
   color: white;
   border: none;
   border-radius: 4px;
-  z-index: 1000;
+  padding: 10px 20px;  /* Added for better button appearance */
+  font-size: 16px;     /* Added for consistency */
 }
