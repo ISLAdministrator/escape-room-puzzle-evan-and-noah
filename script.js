@@ -96,3 +96,23 @@ if (XBtn){
     buttonToHide.style.display = 'button';
  });
 }
+
+// Laptop click to swap background
+  let backgroundSwapped = false;
+  const laptop = document.getElementById('laptop');
+  if (laptop) {
+    laptop.addEventListener('click', function () {
+      if (!backgroundSwapped) {
+        document.body.style.backgroundImage = 'none';
+        document.body.style.backgroundColor = 'black';
+        backgroundSwapped = true;
+        output.textContent = 'Computer screen unlocked!';
+      } else {
+        document.body.style.backgroundImage = "url('background.jpg')";
+        document.body.style.backgroundColor = 'dodgerblue';
+        backgroundSwapped = false;
+        output.textContent = 'Back to library.';
+      }
+    });
+  }
+});
