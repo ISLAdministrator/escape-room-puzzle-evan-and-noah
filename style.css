@@ -154,3 +154,26 @@ h1 {
   padding: 10px 20px;  /* Added for better button appearance */
   font-size: 16px;     /* Added for consistency */
 }
+
+#password-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+#password-input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#submit-password {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
