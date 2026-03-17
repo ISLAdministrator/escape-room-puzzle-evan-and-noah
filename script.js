@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (submitBtn) {
     submitBtn.addEventListener("click", function () {
-      if (passwordInput.value === "4321") {
-        output.textContent = "Access Granted!";
+      if (passwordInput.value === "2431") {
+        output.textContent = "Access Granted!";// place for change to another escape room
       } else {
-        output.textContent = "Wrong code!";
+        output.textContent = "Wrong code!";// place for screamer
       }
     });
   }
