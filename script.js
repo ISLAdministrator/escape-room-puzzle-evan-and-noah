@@ -119,3 +119,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+          // Jumpscare
+          const jumpscareAudio = document.getElementById('jumpscare-audio');
+          const shieldGif = document.getElementById('shield-gif');
+          if (jumpscareAudio && shieldGif) {
+            jumpscareAudio.play();
+            shieldGif.style.display = 'block';
+            jumpscareAudio.addEventListener('ended', () => {
+              shieldGif.style.display = 'none';
+            });
+          }
+          output.textContent = 'Wrong password!';
+        
