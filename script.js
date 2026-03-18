@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (hintBtn) {
     hintBtn.addEventListener('click', () => {
-      output.textContent = 'Maybe organizing the books can help.';
+      output.textContent = 'Number of the shelf is order, number in the end is part of the password. Orgonise books by genres';
     });
   }
 
