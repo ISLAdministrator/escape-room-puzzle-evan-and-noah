@@ -177,7 +177,8 @@ h1 {
   margin-left: 10px;
   cursor: pointer;
 
-  #letter {
+#letter {
+ display: none
  position: fixed;
  left: 50%;
  top: 60%;
@@ -189,6 +190,4 @@ h1 {
  border: none;
  border-radius: 4px;
  z-index: 1000;
- display: none
-
 }
