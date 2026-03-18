@@ -12,6 +12,17 @@ body {
   color: #fff;
 }
 
+#game-container {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: top left;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 h1 {
   text-align: center;
   margin-top: 40px;

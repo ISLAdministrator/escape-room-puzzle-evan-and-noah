@@ -87,6 +87,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  function scaleGame() {
+  const container = document.getElementById("game-container");
+
+  const scaleX = window.innerWidth / 1920;
+  const scaleY = window.innerHeight / 1080;
+
+  const scale = Math.min(scaleX, scaleY);
+
+  container.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener("resize", scaleGame);
+window.addEventListener("load", scaleGame);
+
   if (submitBtn) {
   submitBtn.addEventListener("click", function () {
     if (passwordInput.value === "2431") {
