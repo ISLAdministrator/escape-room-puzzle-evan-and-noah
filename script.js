@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (hintBtn) {
     hintBtn.addEventListener('click', () => {
-      output.textContent = 'Number of the shelf is order, number in the end is part of the password. Orgonise books by genres';
+      output.textContent = 'Numbers of the shelves are order, numbers in the end of the books are parts of the password. Orgonise books by genres';
     });
   }
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (submitBtn) {
     submitBtn.addEventListener("click", function () {
       if (passwordInput.value === "2431") {
-        output.textContent = "Access Granted!";// place for change to another escape room
+        output.textContent = "Congrats! A new message appears on the computer screen: report to the Nurses Office. Under the text is one letter: E. Could this be important later? On the screen below the message all sorts of information is displayed about rats and the effect of their bites. This must be a way to find out about the rat's bite! Maybe there will be a solution. Slowly you open the door and creep down the hallway, making sure to avoid being loud in case you disturb the rat. !";// place for change to another escape room
       } else {
         output.textContent = "Wrong code!";// place for screamer
       }
