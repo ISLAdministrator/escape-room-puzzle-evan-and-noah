@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const elementsToHide = [
         "book-1", "book-2", "book-3", "book-4",
         "fantasy-shelf", "action-shelf", "non-fiction-shelf", "horror-shelf",
-        "button"
+        "button", "laptop"
       ];
 
       elementsToHide.forEach(id => {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const elementsToShow = [
         "book-1", "book-2", "book-3", "book-4",
         "fantasy-shelf", "action-shelf", "non-fiction-shelf", "horror-shelf",
-        "button"
+        "button", "laptop"
       ];
 
       elementsToShow.forEach(id => {
