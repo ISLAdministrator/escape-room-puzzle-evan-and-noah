@@ -176,20 +176,6 @@ h1 {
   font-size: 16px;
   margin-left: 10px;
   cursor: pointer;
-
-#letter {
- display: none
- position: fixed;
- left: 50%;
- top: 60%;
- padding: 8px 12px;
- font-size: 16px;
- cursor: pointer;
- background-color: #44ff8c;
- color: white;
- border: none;
- border-radius: 4px;
- z-index: 1000;
 }
 
 #letter {

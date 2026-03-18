@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const passwordContainer = document.getElementById("password-container");
   const passwordInput = document.getElementById("password-input");
   const submitBtn = document.getElementById("submit-password");
-
   const letterBtn = document.getElementById("letter");
+
   if (book1) {
     book1.addEventListener("click", () => {
       output.textContent = "In the magical land of Eldoria, dragons fly across the skies and forests whisper ancient secrets. A young farm boy named Lorian discovers that he has a mysterious power when a glowing crystal appears in his hands during a storm. Soon he learns that the crystal is one of the last magical relics that keeps darkness from spreading across the kingdom. An evil sorcerer named Malveron is searching for the crystal to gain unlimited power. If he finds it, he could cover the world in shadow and rule over every kingdom. With the help of a brave elf archer, a clever dwarf inventor, and a talking fox, Lorian begins a dangerous journey across enchanted mountains, hidden cities, and monster-filled caves. Along the way, he learns how to use his magic and discovers that courage and friendship can be stronger than any spell. In the final battle at the ancient castle of Eldoria, Lorian must decide whether he is brave enough to face the sorcerer and protect the magical world forever. (2)";
@@ -90,17 +90,21 @@ document.addEventListener('DOMContentLoaded', function () {
   if (submitBtn) {
   submitBtn.addEventListener("click", function () {
     if (passwordInput.value === "2431") {
-      output.textContent = "Congrats! A new message appears on the computer screen: report to the Nurses Office. Under the text is one letter. Could this be important later? On the screen below the message all sorts of information is displayed about rats and the effect of their bites. This must be a way to find out about the rat's bite! Maybe there will be a solution. Slowly you open the door and creep down the hallway, making sure to avoid being loud in case you disturb the rat. ";
-     
-     if (letterBtn) {
-  letterBtn.addEventListener("click", function () {
-    window.location.href = "https://isladministrator.github.io/escape-room-puzzle-anastasija-steinberga-1/";
-  });
-}
+      output.textContent = "Congrats! A new message appears on the computer screen...";
+
+      if (letterBtn) {
+        letterBtn.style.display = "block";
+      }
 
     } else {
       output.textContent = "Wrong code!";
     }
+  });
+}
+
+  if (letterBtn) {
+  letterBtn.addEventListener("click", function () {
+    window.location.href = "https://isladministrator.github.io/escape-room-puzzle-anastasija-steinberga-1/";
   });
 }
 
