@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  // --- Element Selectors ---
   const hintBtn = document.getElementById('button');
   const startBtn = document.getElementById('start');
   const output = document.getElementById('output');
@@ -17,6 +18,37 @@ document.addEventListener('DOMContentLoaded', function () {
   const submitBtn = document.getElementById("submit-password");
   const letterBtn = document.getElementById("letter");
 
+  // --- Game Start Logic ---
+  if (startBtn) {
+    startBtn.addEventListener('click', function () {
+      output.textContent = "Let's get started!";
+
+      // Hide start screen elements
+      document.getElementById('room-title2971').style.display = 'none';
+      document.getElementById('library-start-story').style.display = 'none';
+      startBtn.style.display = 'none';
+
+      // Show the shelves
+      document.getElementById('horror-shelf').style.display = 'block';
+      document.getElementById('fantasy-shelf').style.display = 'block';
+      document.getElementById('action-shelf').style.display = 'block';
+      document.getElementById('non-fiction-shelf').style.display = 'block';
+
+      // Show books and hint button
+      if (book1) book1.style.display = 'block';
+      if (book2) book2.style.display = 'block';
+      if (book3) book3.style.display = 'block';
+      if (book4) book4.style.display = 'block';
+      if (hintBtn) hintBtn.style.display = 'block';
+      if (laptop) laptop.style.display = 'block';
+
+      const audio = document.getElementById('background-audio');
+      if (audio) audio.play().catch(() => { });
+      if (laptop) laptop.style.display = 'block';
+    });
+  }
+
+  // --- Book Click Events ---
   if (book1) {
     book1.addEventListener("click", () => {
       output.textContent = "In the magical land of Eldoria, dragons fly across the skies and forests whisper ancient secrets. A young farm boy named Lorian discovers that he has a mysterious power when a glowing crystal appears in his hands during a storm. Soon he learns that the crystal is one of the last magical relics that keeps darkness from spreading across the kingdom. An evil sorcerer named Malveron is searching for the crystal to gain unlimited power. If he finds it, he could cover the world in shadow and rule over every kingdom. With the help of a brave elf archer, a clever dwarf inventor, and a talking fox, Lorian begins a dangerous journey across enchanted mountains, hidden cities, and monster-filled caves. Along the way, he learns how to use his magic and discovers that courage and friendship can be stronger than any spell. In the final battle at the ancient castle of Eldoria, Lorian must decide whether he is brave enough to face the sorcerer and protect the magical world forever. (2)";
@@ -41,24 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (startBtn) {
-    startBtn.addEventListener('click', function () {
-      output.textContent = "Let's get started!";
-
-      document.getElementById('room-title2971').style.display = 'none';
-      document.getElementById('library-start-story').style.display = 'none';
-      startBtn.style.display = 'none';
-
-      document.getElementById('horror-shelf').style.display = 'block';
-      document.getElementById('fantasy-shelf').style.display = 'block';
-      document.getElementById('action-shelf').style.display = 'block';
-      document.getElementById('non-fiction-shelf').style.display = 'block';
-
-      const audio = document.getElementById('background-audio');
-      if (audio) audio.play().catch(() => {});
-    });
-  }
-
+  // --- Interaction Logic ---
   if (hintBtn) {
     hintBtn.addEventListener('click', () => {
       output.textContent = 'Numbers on the top of the shelves are order, numbers in the end of the books description are digits of the password. Organize books by genres';
@@ -67,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (laptop) {
     laptop.addEventListener("click", function () {
-
       document.body.style.backgroundImage = "none";
       document.body.style.backgroundColor = "black";
 
@@ -87,44 +101,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function scaleGame() {
-  const container = document.getElementById("game-container");
-
-  const scaleX = window.innerWidth / 1920;
-  const scaleY = window.innerHeight / 1080;
-
-  const scale = Math.min(scaleX, scaleY);
-
-  container.style.transform = `scale(${scale})`;
-}
-
-window.addEventListener("resize", scaleGame);
-window.addEventListener("load", scaleGame);
-
+  // --- Password & Exit Logic ---
   if (submitBtn) {
-  submitBtn.addEventListener("click", function () {
-    if (passwordInput.value === "2431") {
-      output.textContent = "Congrats! A new message appears on the computer screen...";
+    submitBtn.addEventListener("click", function () {
+      if (passwordInput.value === "2431") {
+        output.textContent = "Congrats! A new message appears on the computer screen...";
+        if (letterBtn) {
+          letterBtn.style.display = "block";
+        }
+      } else {
+        // --- WRONG PASSWORD LOGIC ---
+        output.textContent = "Wrong code!";
 
-      if (letterBtn) {
-        letterBtn.style.display = "block";
+        const jumpscareAudio = document.getElementById('jumpscare-audio');
+        const shieldGif = document.getElementById('shield-gif');
+        
+        if (jumpscareAudio && shieldGif) {
+          jumpscareAudio.play();
+          shieldGif.style.display = 'block';
+          jumpscareAudio.addEventListener('ended', () => {
+            shieldGif.style.display = 'none';
+          });
+        }
       }
-
-    } else {
-      output.textContent = "Wrong code!";
-    }
-  });
-}
+    });
+  }
 
   if (letterBtn) {
-  letterBtn.addEventListener("click", function () {
-    window.location.href = "https://isladministrator.github.io/escape-room-puzzle-anastasija-steinberga-1/";
-  });
-}
+    letterBtn.addEventListener("click", function () {
+      window.location.href = "https://isladministrator.github.io/escape-room-puzzle-anastasija-steinberga-1/";
+    });
+  }
 
   if (exitBtn) {
     exitBtn.addEventListener("click", function () {
-
       document.body.style.backgroundImage = "url('background.jpg')";
       document.body.style.backgroundColor = "dodgerblue";
 
@@ -144,17 +154,17 @@ window.addEventListener("load", scaleGame);
     });
   }
 
-});
+  // --- Scaling Helper ---
+  function scaleGame() {
+    const container = document.getElementById("game-container");
+    if (!container) return;
+    const scaleX = window.innerWidth / 1920;
+    const scaleY = window.innerHeight / 1080;
+    const scale = Math.min(scaleX, scaleY);
+    container.style.transform = `scale(${scale})`;
+  }
 
-          // Jumpscare
-          const jumpscareAudio = document.getElementById('jumpscare-audio');
-          const shieldGif = document.getElementById('shield-gif');
-          if (jumpscareAudio && shieldGif) {
-            jumpscareAudio.play();
-            shieldGif.style.display = 'block';
-            jumpscareAudio.addEventListener('ended', () => {
-              shieldGif.style.display = 'none';
-            });
-          }
-          output.textContent = 'Wrong password!';
-        
+  window.addEventListener("resize", scaleGame);
+  scaleGame();
+
+}); // End of DOMContentLoaded

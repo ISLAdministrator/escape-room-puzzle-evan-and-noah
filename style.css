@@ -1,4 +1,3 @@
-/* Basic page styles for the Escape Room */
 body {
   background-color: dodgerblue;
   background-image: url('background.jpg');
@@ -10,12 +9,18 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
+  /* Add these to center the main content */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  overflow: hidden; 
 }
 
 #game-container {
-  width: 1920px;
-  height: 1080px;
-  transform-origin: top left;
+  width: 100%;
+  height: 100vh;
+  position: relative; /* Allows absolute/fixed children to position correctly */
 }
 
 body {
@@ -31,6 +36,7 @@ h1 {
 
 #button {
   /* float the hint button to the side of the page for easier access */
+  display: none;
   position: fixed;
   left: 5px;
   top: 60%;
@@ -50,93 +56,72 @@ h1 {
   cursor: pointer;
 }
 
-#output {
-  position: fixed;
-  left: 500px;
-  bottom: 60%;
-  margin: 10px auto;
-  font-size: 18px;
-  background: rgba(0,0,0,0.45);
-  padding: 8px 12px;
-  border-radius: 6px;
-  width: 80%;
-  max-width: 640px;
+#output:empty {
+  display: none;
 }
 
-/* highlight style for long text passages */
+
 .highlight {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black */
   color: #50ff4d;
-  padding: 4px 6px;
-  border-radius: 4px;
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid #50ff4d; /* Optional: adds to the computer terminal look */
+
+  /* --- WIDTH & CENTERING --- */
+  width: 85vw;           /* Wide, but leaves a little gap on the sides */
+  max-width: 1200px;     /* Keeps it readable on massive screens */
+  margin: 20px auto;     /* Centers it horizontally */
+  
+  /* --- TEXT SIZE --- */
+  font-size: clamp(20px, 3vw, 36px); 
+  line-height: 1.6;
+  text-align: center;
 }
 
+/* --- Centered Main Elements --- */
 #laptop {
   position: fixed;
-  left: 50%; 
-  bottom: 20%; 
-  transform: translateX(-50%); 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Dead center */
   z-index: 1000;
+  display: none;
 }
 
-#book2 {
-  /*all book code is generally the same with slight variations*/
+#output {
   position: fixed;
-  left: 675px;
-  bottom: 2%;
-  transform: translateY(-50%);
-  z-index: 1000;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%); /* Centers the text box horizontally */
+  text-align: center;
+  width: 80%;
+  max-index: 2000;
 }
 
-#book-4 {
-  position: fixed;
-  left: 1077px;
-  bottom: 22%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
+/* --- Distributed Books (on the floor) --- */
+#book-1 { position: fixed; left: 20%; bottom: 10%; display: none; }
+#book-2 { position: fixed; left: 40%; bottom: 15%; display: none; }
+#book-3 { position: fixed; left: 60%; bottom: 10%; display: none; }
+#book-4 { position: fixed; left: 80%; bottom: 15%; display: none; }
 
-#book-3 {
-  position: fixed;
-  left: 275px;
-  bottom: 15%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-
-#book-1 {
-  position: fixed;
-  left: 575px;
-  bottom: 2%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
+/* --- Distributed Shelves (on the walls) --- */
+#fantasy-shelf     { position: fixed; left: 15%; top: 40%; display: none; }
+#action-shelf      { position: fixed; left: 35%; top: 45%; display: none; }
+#non-fiction-shelf { position: fixed; left: 65%; top: 40%; display: none; }
+#horror-shelf      { position: fixed; left: 85%; top: 45%; display: none; }
 
 #book-1, #book-2, #book-3, #book-4, #laptop {
-  cursor: pointer;
-}
-
-#horror-shelf  { 
-  display: none;
-  position: fixed;
-  left: 1500px;
-}
-#fantasy-shelf  { 
-  display: none;
-  position: fixed;
-  left: 200px;
-}
-#action-shelf {
-  display: none;
-  position: fixed;
-  left: 850px;
-}
-#non-fiction-shelf {
-  display: none;
-  position: fixed;
-  left: 1130px;
+  display: none; /* Hide them at the start */
 
 }
+
+/* Spread the Shelves out using % instead of px */
+#fantasy-shelf { left: 15%; top: 40%; display: none; position: fixed; }
+#action-shelf  { left: 35%; top: 40%; display: none; position: fixed; }
+#non-fiction-shelf { left: 60%; top: 40%; display: none; position: fixed; }
+#horror-shelf  { left: 85%; top: 40%; display: none; position: fixed; }
+
 #exit {
   position: fixed;
   right: 20px;
