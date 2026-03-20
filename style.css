@@ -106,14 +106,19 @@ h1 {
 #book-4 { position: fixed; left: 80%; bottom: 15%; display: none; }
 
 /* --- Distributed Shelves (on the walls) --- */
-#fantasy-shelf     { position: fixed; left: 15%; top: 40%; display: none; }
-#action-shelf      { position: fixed; left: 35%; top: 45%; display: none; }
-#non-fiction-shelf { position: fixed; left: 65%; top: 40%; display: none; }
-#horror-shelf      { position: fixed; left: 85%; top: 45%; display: none; }
+#fantasy-shelf     { position: fixed; left: 15%; top: 20%; display: none; }
+#action-shelf      { position: fixed; left: 35%; top: 25%; display: none; }
+#non-fiction-shelf { position: fixed; left: 65%; top: 20%; display: none; }
+#horror-shelf      { position: fixed; left: 85%; top: 25%; display: none; }
+
+#fantasy-shelf, #action-shelf, #non-fiction-shelf, #horror-shelf {
+  background-color: #1e90ff80;
+  padding: 1vb;
+  border-radius: 1vb;
+}
 
 #book-1, #book-2, #book-3, #book-4, #laptop {
   display: none; /* Hide them at the start */
-
 }
 
 /* Spread the Shelves out using % instead of px */
@@ -181,7 +186,7 @@ h1 {
   top: 65%; /* slightly below laptop */
   transform: translateX(-50%);
   padding: 8px 12px;
-  font-size: 16px;
+  font-size: 36px;
   cursor: pointer;
   background-color: #44ff8c;
   color: white;
