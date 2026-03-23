@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Interaction Logic ---
   if (hintBtn) {
     hintBtn.addEventListener('click', () => {
-      output.textContent = 'You will enter a 4-digit code.<br>Numbers on the top of the shelves are order, numbers in the end of the books description are digits of the password. Organize books by genres';
+      output.textContent = 'You will enter a 4-digit code.<br>Numbers on the top of the shelves are the order of the digits in the code, numbers in the end of the books description are digits of the password. Organize books by genres';
     });
   }
 
