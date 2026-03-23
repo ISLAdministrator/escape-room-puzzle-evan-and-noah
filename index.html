@@ -1,31 +1,70 @@
-<!--This is an HTML Comment, text just for humans :) It is not part of your code.
-Good coders use comments frequently to stay organized and communicate with collaborators.
-
-The code below is basic HTML for your puzzle.
-You can edit it, add to it, and delete parts of it.
-
-DO NOT let AI code for you!!
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Escape Room</title>
+  <title>Escape The Library</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <div id="game-container">
 
-  <h1>Escape Room</h1>
+  <h1 id="room-title2971">Escape Library</h1>
 
-  <p>
-    Write the story of your escape room here.
+  <p id="library-start-story" class="highlight">
+    “Now locked inside the library you begin to look for a way to escape when you notice books have been strewn across the floor from each section, no longer in order. Well I have nothing better to do, you think to yourself. You start to pick up the books from the floor when you realise the books are from all different sections of the library. When you step back you notice that you can see all of the sections clearly in a row. Use the order of the missing books as well as the numbers on the spine to unlock the computer screen”
+  </p>
+  
+  <div id="password-container" style="display: none;">
+  <input type="text" id="password-input" placeholder="Enter code">
+  <button id="submit-password">Submit</button>
+</div>
+
+  <p id="action-shelf">
+   Action (2)
+ </p>
+
+ <!-- Audio element -->
+  <audio id="background-audio" loop>
+    <source src="assets/disassemblyrequired.mp3" type="audio/mpeg">
+  </audio>
+
+ <p id="non-fiction-shelf">
+   Non-Fictioin (3)
+ </p>
+
+  <p id="horror-shelf">
+    Horror (4)
   </p>
 
-  <button id="button">Click me</button>
+<p id="fantasy-shelf">
+    Fantasy (1)
+  </p>
+
+  <!-- start-of-game button -->
+  <button id="start">Start</button>
+
+  <!-- hint button floated to the side by CSS -->
+  <button id="button">Hint</button>
 
   <p id="output"></p>
-
+<!-- book appearance 1-4-->
+  
   <script src="script.js"></script>
+
+   <img src="assets/book2.jpeg" alt="book2" id="book-2" width="75" height="75">
+
+  <img src="assets/book-4.png" alt="book-4" id="book-4" width="75" height="75">
+
+<img src="assets/Book-3.png" alt="book-3" id="book-3" width="75" height="75">
+
+<img src="assets/book.jpeg" alt="book-1" id="book-1" width="75" height="75">
+
+<!-- Laptop image -->
+<img src="assets/laptop.jpeg" alt="laptop" id="laptop" width="80" height="80">
+
+<!--exit text button-->
+<button id="exit">X</button>
+<button id="letter">Your letter is E<br>Click to go to the Nurse's office</button>
+    </div>
 </body>
 </html>
