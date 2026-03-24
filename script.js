@@ -1,12 +1,194 @@
-console.log("Script loaded");
+document.addEventListener('DOMContentLoaded', function () {
 
-// below is basic example code for using a button
-// you can use it, expand on it, or delete it
-// that all depends on your team's plan.
+  // --- Element Selectors ---
+  const hintBtn = document.getElementById('button');
+  const startBtn = document.getElementById('start');
+  const output = document.getElementById('output');
 
-const button = document.getElementById("button");
-const output = document.getElementById("output");
+  const book1 = document.getElementById("book-1");
+  const book2 = document.getElementById("book-2");
+  const book3 = document.getElementById("book-3");
+  const book4 = document.getElementById("book-4");
 
-button.addEventListener("click", function () {
-  output.textContent = "JavaScript is working.";
-});
+  const laptop = document.getElementById("laptop");
+  const exitBtn = document.getElementById("exit");
+
+  const passwordContainer = document.getElementById("password-container");
+  const passwordInput = document.getElementById("password-input");
+  const submitBtn = document.getElementById("submit-password");
+  const letterBtn = document.getElementById("letter");
+
+  // --- Game Start Logic ---
+  if (startBtn) {
+    startBtn.addEventListener('click', function () {
+      output.textContent = "Let's get started!";
+
+      // Hide start screen elements
+      document.getElementById('room-title2971').style.display = 'none';
+      document.getElementById('library-start-story').style.display = 'none';
+      startBtn.style.display = 'none';
+
+      // Show the shelves
+      document.getElementById('horror-shelf').style.display = 'block';
+      document.getElementById('fantasy-shelf').style.display = 'block';
+      document.getElementById('action-shelf').style.display = 'block';
+      document.getElementById('non-fiction-shelf').style.display = 'block';
+
+      // Show books and hint button
+      if (book1) book1.style.display = 'block';
+      if (book2) book2.style.display = 'block';
+      if (book3) book3.style.display = 'block';
+      if (book4) book4.style.display = 'block';
+      if (hintBtn) hintBtn.style.display = 'block';
+      if (laptop) laptop.style.display = 'block';
+
+      const audio = document.getElementById('background-audio');
+      if (audio) audio.play().catch(() => { });
+      if (laptop) laptop.style.display = 'block';
+    });
+  }
+
+  // --- Book Click Events ---
+  if (book1) {
+    book1.addEventListener("click", () => {
+      output.textContent = "In the magical land of Eldoria, dragons fly across the skies and forests whisper ancient secrets. A young farm boy named Lorian discovers that he has a mysterious power when a glowing crystal appears in his hands during a storm. Soon he learns that the crystal is one of the last magical relics that keeps darkness from spreading across the kingdom. An evil sorcerer named Malveron is searching for the crystal to gain unlimited power. If he finds it, he could cover the world in shadow and rule over every kingdom. With the help of a brave elf archer, a clever dwarf inventor, and a talking fox, Lorian begins a dangerous journey across enchanted mountains, hidden cities, and monster-filled caves. Along the way, he learns how to use his magic and discovers that courage and friendship can be stronger than any spell. In the final battle at the ancient castle of Eldoria, Lorian must decide whether he is brave enough to face the sorcerer and protect the magical world forever. (2)";
+      // This adds the background color dynamically
+      output.style.backgroundColor = "rgb(0 0 0 / 50%)";
+
+      // Optional: add some padding so the text isn't touching the edges
+      output.style.padding = "1vb";
+      output.style.borderRadius = "1vb";
+    });
+  }
+
+  if (book2) {
+    book2.addEventListener("click", () => {
+      output.textContent = "With this book you are going to explore the real oceans of Earth and explain why they are important for life on our planet. It describes how oceans formed millions of years ago, how ocean currents move water around the globe, and how marine animals—from tiny plankton to giant whales—survive in different ocean environments. The book also explains how scientists study the ocean using research ships, satellites, and deep-sea robots. Readers learn about coral reefs, deep-sea trenches, and the role oceans play in controlling Earth’s climate. In addition, the book discusses real environmental challenges such as pollution, overfishing, and climate change. It shows how these problems affect ocean life and what people around the world are doing to protect marine ecosystems. Through clear explanations and real scientific facts, the book helps readers understand how the oceans work and why protecting them is important for the future of our planet. (3)";
+      // This adds the background color dynamically
+      output.style.backgroundColor = "rgb(0 0 0 / 50%)";
+
+      // Optional: add some padding so the text isn't touching the edges
+      output.style.padding = "1vb";
+      output.style.borderRadius = "1vb";
+    });
+  }
+
+  if (book3) {
+    book3.addEventListener("click", () => {
+      output.textContent = "When a dangerous criminal group steals a powerful new weapon from a secret military lab, former special agent Jake Carter is pulled back into action. The group plans to sell the weapon to the highest bidder, which could put thousands of lives at risk. Jake teams up with a skilled hacker and a fearless pilot to track the criminals across several countries. Their mission leads them through high-speed car chases, intense shootouts, and daring escapes from enemy hideouts. As the clock ticks down, Jake must rely on his training, quick thinking, and courage to stop the criminals before the weapon is used. In a final showdown at an abandoned fortress, Jake faces the leader of the group in a fight that will decide the fate of many innocent people. Filled with danger, fast-paced battles, and heroic risks, the story follows one man’s fight to stop a global threat before it’s too late. (4)";
+      // This adds the background color dynamically
+      output.style.backgroundColor = "rgb(0 0 0 / 50%)";
+
+      // Optional: add some padding so the text isn't touching the edges
+      output.style.padding = "1vb";
+      output.style.borderRadius = "1vb";
+    });
+  }
+
+  if (book4) {
+    book4.addEventListener("click", () => {
+      output.textContent = "After moving to a small, quiet town, sixteen-year-old Mara begins hearing strange noises in her new home. Every night at exactly 3:13 a.m., footsteps echo through the hallway—even though everyone in the house is asleep. At first, Mara thinks the old house is just settling. But then doors start opening by themselves, cold whispers come from the walls, and shadows move where nothing should be. When Mara searches the town’s history, she learns something terrifying: years ago, a family disappeared in the same house, and no one ever found out why. Soon Mara realizes the house is not empty. Something is still there, watching, waiting, and growing stronger each night. As the haunting becomes more violent, Mara must uncover the truth about what happened in the house before the same dark force takes her too. But the deeper she digs, the more she begins to fear that some secrets were meant to stay buried. (1)";
+      // This adds the background color dynamically
+      output.style.backgroundColor = "rgb(0 0 0 / 50%)";
+
+      // Optional: add some padding so the text isn't touching the edges
+      output.style.padding = "1vb";
+      output.style.borderRadius = "1vb";
+    });
+  }
+
+  // --- Interaction Logic ---
+  if (hintBtn) {
+    hintBtn.addEventListener('click', () => {
+      output.textContent = 'You will enter a 4-digit code. The code is entered after clicking the computer icon.%0DNumbers on the top of the shelves are the order of the digits in the code, numbers in the end of the books description are digits of the password. Organize books by genres';
+    });
+  }
+
+  if (laptop) {
+    laptop.addEventListener("click", function () {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundColor = "black";
+
+      const elementsToHide = [
+        "book-1", "book-2", "book-3", "book-4",
+        "fantasy-shelf", "action-shelf", "non-fiction-shelf", "horror-shelf",
+        "button", "laptop",
+      ];
+
+      elementsToHide.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = "none";
+      });
+
+      passwordContainer.style.display = "block";
+      output.textContent = "Enter Password";
+    });
+  }
+
+  // --- Password & Exit Logic ---
+  if (submitBtn) {
+    submitBtn.addEventListener("click", function () {
+      if (passwordInput.value === "2431") {
+        output.textContent = "Congrats! A new message appears on the computer screen...";
+        if (letterBtn) {
+          letterBtn.style.display = "block";
+        }
+      } else {
+        // --- WRONG PASSWORD LOGIC ---
+        output.textContent = "Wrong code!";
+
+        const jumpscareAudio = document.getElementById('jumpscare-audio');
+        const shieldGif = document.getElementById('shield-gif');
+
+        if (jumpscareAudio && shieldGif) {
+          jumpscareAudio.play();
+          shieldGif.style.display = 'block';
+          jumpscareAudio.addEventListener('ended', () => {
+            shieldGif.style.display = 'none';
+          });
+        }
+      }
+    });
+  }
+
+  if (letterBtn) {
+    letterBtn.addEventListener("click", function () {
+      window.location.href = "https://isladministrator.github.io/escape-room-puzzle-anastasija-steinberga-1/";
+    });
+  }
+
+  if (exitBtn) {
+    exitBtn.addEventListener("click", function () {
+      document.body.style.backgroundImage = "url('background.jpg')";
+      document.body.style.backgroundColor = "dodgerblue";
+
+      const elementsToShow = [
+        "book-1", "book-2", "book-3", "book-4",
+        "fantasy-shelf", "action-shelf", "non-fiction-shelf", "horror-shelf",
+        "button", "laptop",
+      ];
+
+      elementsToShow.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = "block";
+      });
+
+      passwordContainer.style.display = "none";
+      output.textContent = "Back in the library.";
+    });
+  }
+
+  // --- Scaling Helper ---
+  function scaleGame() {
+    const container = document.getElementById("game-container");
+    if (!container) return;
+    const scaleX = window.innerWidth / 1920;
+    const scaleY = window.innerHeight / 1080;
+    const scale = Math.min(scaleX, scaleY);
+    container.style.transform = `scale(${scale})`;
+  }
+
+  window.addEventListener("resize", scaleGame);
+  scaleGame();
+
+}); // End of DOMContentLoaded
